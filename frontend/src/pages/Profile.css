@@ -1,0 +1,116 @@
+.page-profile { display: flex; flex-direction: column; height: 100%; }
+
+/* Auth card */
+.auth-card { padding: 28px 20px; text-align: center; }
+.auth-icon { font-size: 36px; margin-bottom: 14px; }
+.auth-title { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+.auth-sub { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6; }
+
+.auth-em-notice {
+  padding: 10px 14px;
+  background: rgba(220,38,38,0.08);
+  border: 1px solid var(--red-border);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--red-pale);
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.auth-error {
+  padding: 10px 14px;
+  background: rgba(220,38,38,0.1);
+  border: 1px solid var(--red-border);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--red-pale);
+  margin-top: 10px;
+  text-align: left;
+}
+
+.auth-divider {
+  position: relative; text-align: center; margin: 18px 0;
+  color: var(--text-muted); font-size: 12px;
+}
+.auth-divider::before, .auth-divider::after {
+  content: ''; position: absolute; top: 50%;
+  width: calc(50% - 22px); height: 1px; background: var(--border);
+}
+.auth-divider::before { left: 0; }
+.auth-divider::after  { right: 0; }
+
+.auth-footer-note {
+  text-align: center; margin-top: 20px;
+  font-size: 11px; color: var(--text-muted); line-height: 1.7;
+}
+
+/* Profile header */
+.profile-header {
+  display: flex; align-items: center; gap: 16px;
+  padding: 24px 20px 16px;
+}
+.profile-avatar {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink-core), #7B3FBE);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; font-weight: 800; color: #fff; flex-shrink: 0;
+  box-shadow: 0 4px 20px var(--pink-glow-lg);
+}
+.profile-name { font-size: 18px; font-weight: 700; margin-bottom: 3px; }
+.profile-email { font-size: 12px; color: var(--text-secondary); }
+.profile-verified {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 5px; font-size: 11px; font-weight: 600; color: var(--green-soft);
+}
+
+/* Contact rows */
+.contact-row-profile {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); margin-bottom: 6px;
+}
+.contact-row-profile.system { opacity: 0.7; }
+.crp-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; flex-shrink: 0;
+}
+.system-avatar { background: rgba(29,78,216,0.15); color: var(--blue-pale); }
+.user-avatar   { background: var(--pink-glow); color: var(--pink-soft); }
+.crp-info { flex: 1; }
+.crp-name { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+.crp-rel  { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+.crp-num  { font-size: 12px; color: var(--text-secondary); font-family: var(--font-mono); }
+.crp-del {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(220,38,38,0.12); border: none;
+  color: var(--red-pale); font-size: 11px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.crp-del:active { background: rgba(220,38,38,0.25); }
+
+/* Add contact form */
+.add-contact-form {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px; margin-top: 8px;
+  display: flex; flex-direction: column;
+}
+
+/* Settings rows */
+.settings-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 15px 14px;
+  background: var(--bg-card); border-radius: var(--radius-sm);
+  cursor: pointer; transition: opacity 0.2s;
+  margin-bottom: 2px;
+}
+.settings-row:active { opacity: 0.7; }
+.sr-icon { font-size: 18px; width: 28px; text-align: center; flex-shrink: 0; }
+.sr-body { flex: 1; }
+.sr-label { font-size: 14px; font-weight: 500; color: var(--text-primary); }
+.sr-sub   { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
